@@ -2,28 +2,30 @@
 A detailed tutorial on how to implement Google Play Authentication in Unity with Firebase in 2023 using the new GooglePlayGamesPlugin-0.11.01
 
 ## Table of Contents
-1. **[Initial Setup and Details](Initial-Setup-and-Details)**
-   1. **[Disclaimer](Disclaimer)**
-   1. **[Details](Details)**
-   2. **[Before continuing you should have](Before-continuing-you-should-have)**
-2. **[Instructions](Instructions)**
-   1. **[Firebase Setup](Firebase-Setup)**
-   2. **[Unity Setup 0](Unity-Setup-0)**
-   3. **[Grabbing Unity's SHA1 key](Grabbing-Unitys-SHA1-key)**
-   4. **[GitHub Privacy Policy](GitHub-Privacy-Policy)**
-   5. **[Google Play Console Setup 0](Google-Play-Console-Setup-0)**
-   6. **[Google Cloud APIs & Services Setup](Google-Cloud-APIs-&-Services-Setup)**
-   7. **[Google Play Console Setup 1](Google-Play-Console-Setup-1)**
-   8. **[Unity Setup 1](Unity-Setup-1)**
-   9. **[Unity Testing](Unity-Testing)**
+1. **[Initial Setup and Details](#Initial-Setup-and-Details)**
+   1. **[Disclaimer](#Disclaimer)**
+   1. **[Details](#Details)**
+   2. **[Before continuing you should have](#Before-continuing-you-should-have)**
+2. **[Instructions](#Instructions)**
+   1. **[Firebase Setup](#Firebase-Setup)**
+   2. **[Unity Setup 0](#Unity-Setup-0)**
+   3. **[Grabbing Unity's SHA1 key](#Grabbing-Unitys-SHA1-key)**
+   4. **[GitHub Privacy Policy](#GitHub-Privacy-Policy)**
+   5. **[Google Play Console Setup 0](#Google-Play-Console-Setup-0)**
+   6. **[Google Cloud APIs & Services Setup](#Google-Cloud-APIs-&-Services-Setup)**
+   7. **[Google Play Console Setup 1](#Google-Play-Console-Setup-1)**
+   8. **[Unity Setup 1](#Unity-Setup-1)**
+   9. **[Unity Testing](#Unity-Testing)**
 
 ## Initial Setup and Details
 ### Disclaimer
 To the best of my knowledge, this walkthrough and all content inside of it has been typed with no errors or misinformation. That being said, neither I, nor Nichathan Gaming owns, has affiliation to, or any form of control over Unity, Google, the Google Console or Google Firebase. All information in this walkthrough is subject to become obsolete at any moment and there are no guarantees that anything inside of this walkthrough will work. By continuing to follow this walkthrough, you understand that neither Johnathan Nichols nor Nichathan Gaming are responsible for whatever may happen. That being said, I put a lot of time and effort into this walkthrough and I sincerely hope that it can help you.
+</br>**[Back To Top](#Table-of-Contents)**
 
 ### Details
 This walkthrough was typed by Johnathan Nichols of [Nichathan Gaming](https://play.google.com/store/apps/dev?id=5505294983591200024) on February 4th 2023. This guide was typed after months of casual intrigue and a week of serious contemplation over the authentication process. The walkthroughs purpose is to supplement the lack of documentation by Google Play Console, Unity and Firebase which all contain frustratingly outdated and useless documentation with nothing current or pointing to depreciated links.
 <br>Please note that this tutorial is only for **Android Apps** and does not cover **Apple** or **IOS** apps.
+</br>**[Back To Top](#Table-of-Contents)**
 
 ### Before continuing you should have
 - A [Google Play Account](https://play.google.com/console) which costs around $25 (USD). 
@@ -32,6 +34,7 @@ This walkthrough was typed by Johnathan Nichols of [Nichathan Gaming](https://pl
 - The latest [Unity](https://unity.com/download) LTS editor with Android modules installed.
 - A Console editor such as *Command Prompt*, *Powershell*, *[Hyper](https://hyper.is/)*, etc...
 - An Android device to test/run your app on
+</br>**[Back To Top](#Table-of-Contents)**
 
 ## Instructions
 ### Firebase Setup
@@ -74,6 +77,7 @@ This walkthrough was typed by Johnathan Nichols of [Nichathan Gaming](https://pl
 <br>19. Click *Save*
 <br>![PG Add](https://user-images.githubusercontent.com/103794085/216766527-6f80cc34-8c3e-45af-af08-7b49c4d0673b.png)
 ### Firebase Setup End
+</br>**[Back To Top](#Table-of-Contents)**
 
 ### Unity Setup 0
 Note: This walkthrough uses the Unity Editor 2021.3.16f1 which is the latest LTS version. If you encounter errors, first make sure that you are using the latest LTS version of Unity. You should also have the *Android Build Support* platform modules installed. I read that having *iOS Build Support* may clear some of the issues so I have it as well but I am unsure if it is useful or not.
@@ -108,6 +112,7 @@ Note: This walkthrough uses the Unity Editor 2021.3.16f1 which is the latest LTS
 <br>14. At the new pop-up screen *Keystore and Key created* click *Yes*
 <br>![pop up keystore](https://user-images.githubusercontent.com/103794085/216768094-df88d352-b91a-48cb-9d7a-b967b4b41da0.png)
 ### Unity Setup 0 End
+</br>**[Back To Top](#Table-of-Contents)**
 
 ### Grabbing Unitys SHA1 key
 Note: Now, we will grab the SHA1 key which we just created in step 13 of **[Unity Setup 0](Unity-Setup-0)**. To do this, we must work in a console. This may be **Command Prompt**, **PowerShell**, **[Hyper](https://hyper.is/)**, or any other console. Please, be careful with the commands that you type into your console, especially if you are untrained. While you shouldn't be able to seriously damage anything since you have few permissions until you know how to get them, there is still a chance that you can do damage if you deviate from the commands shown in this walkthrough. For the purposes of this walkthrough, we will use **[Hyper](https://hyper.is/)** but the commands should still work in any other console. Please note as well that in console commands, they use the word *directory* instead of folder. Some useful console commands are *ls* (lists all files and directories in the current directory), cd .. (navigates to the directory that holds this directory), cd /path/ (navigates to the directory at the given path). Also, you should not be able to use *CTRL+C* or *CTRL+X* to copy or cut text. Instead, you may need to use the right mouse button to copy in consoles.
@@ -120,6 +125,7 @@ Note: Now, we will grab the SHA1 key which we just created in step 13 of **[Unit
 <br>4. Finally, highlight and copy your SHA1 certificate fingerprint. Remember, you may need to use the right mouse button to copy in your console.
 <br>![CopySHA1](https://user-images.githubusercontent.com/103794085/216769111-405d82f9-3fb0-42a7-9540-a1e0624b7e37.png)
 ### Grabbing Unitys SHA1 key End
+</br>**[Back To Top](#Table-of-Contents)**
 
 ### GitHub Privacy Policy
 Note: The Google Play Console requires all apps to have a privacy policy. That being said, all a privacy policy is, is pretty much a notice of intent. You can host your privacy policy on GitHub or on your personal website. However, GitHub is free and easy to use. However, if GitHub or your GitHub account are taken offline or deleted, your app may be forcefully unpublished until a new privacy policy is provided.
@@ -134,6 +140,7 @@ I hereby state, to the best of my knowledge and belief, that I have not programm
 ```
 <br>5. Copy and save the link to your GitHub Repository. For example, mine is `https://github.com/Nichathan-Gaming/GPGSPrivacyPolicy`.
 ### GitHub Privacy Policy End
+</br>**[Back To Top](#Table-of-Contents)**
 
 ### Google Play Console Setup 0
 Note: Remember, you must purchase a Google Play Console account first which costs around $25 (USD) at the time that this walkthrough was published. Costs are subject to increase or decrease at any time.
@@ -156,6 +163,7 @@ Note: Remember, you must purchase a Google Play Console account first which cost
 <br>9. Click *Create OAuth client* then follow the link to *Create OAuth Client ID*.
 <br>![follow link](https://user-images.githubusercontent.com/103794085/216771153-f58c2e77-58f1-49a6-9d47-41f9cbb8eeb6.png)
 ### Google Play Console Setup 0 End
+</br>**[Back To Top](#Table-of-Contents)**
 
 ### Google Cloud APIs & Services Setup
 Note: Ensure that you are always in the current project. If you ever leave the web page and return, you may need to re-select your project. 
@@ -167,6 +175,7 @@ Note: Ensure that you are always in the current project. If you ever leave the w
 <br>3. In the popup, download the JSON file and click *OK*
 <br>![popup](https://user-images.githubusercontent.com/103794085/216772952-69ea3fb5-9062-4452-9a0f-8091f48ec19b.png)
 ### Google Cloud APIs & Services Setup End
+</br>**[Back To Top](#Table-of-Contents)**
 
 ### Google Play Console Setup 1
 Note: Make sure that you have done all of the previous steps before reaching this part. We will continue from the last step of **[Google Play Console Setup 0](Google-Play-Console-Setup-0)**.
@@ -186,6 +195,7 @@ Note: Make sure that you have done all of the previous steps before reaching thi
 <br>6. Return to *Configuration* then click *Review and Publish*. You should now be able to click the *Publish* button. If not then you should see required fields that you neglected to fill out. At the pop-up, confirm the publish.
 <br>![publish btn](https://user-images.githubusercontent.com/103794085/216799607-f60e680c-157b-4f1d-a35d-a75f7e79a312.png)
 ### Google Play Console Setup 1 End
+</br>**[Back To Top](#Table-of-Contents)**
 
 ### Unity Setup 1
 Note: If you closed *Unity* at any time since [Unity Setup 0](Unity-Setup-0), you will need to reenter your *keystore* password in *Project Settings/Player/Publishing Settings*.
@@ -217,6 +227,7 @@ Note: If you closed *Unity* at any time since [Unity Setup 0](Unity-Setup-0), yo
 <br>12. In *Project/Assets* right click and create a new C# script. Name it whatever you wish but for the purposes of this walkthrough, we will name it 'Auth'.
 <br>![Create](https://user-images.githubusercontent.com/103794085/216777152-0466c8de-2dfd-44c5-996c-f61d26fe18a0.png)
 <br>13. Open the script in your favorite script editor. For the purposes of this walkthrough, we will use the Unity default *Visual Studio*. Then copy either the *Foundation Code* or the *Debugging Code* below.
+</br>**[Back To Top](#Table-of-Contents)**
 #### Foundation Code
 ```
 using Firebase.Auth;
@@ -258,6 +269,7 @@ public class Auth : MonoBehaviour
     }
 }
 ```
+</br>**[Back To Top](#Table-of-Contents)**
 #### Debugging Code
 ```
 using Firebase.Auth;
@@ -335,6 +347,7 @@ public class Auth : MonoBehaviour
 }
 ```
 ### Unity Setup 1 End
+</br>**[Back To Top](#Table-of-Contents)**
 
 ### Unity Testing
 Note: For the purposes of this walkthrough, we will use the **[Debugging Code](Debugging-Code)**. If you are just here for the code then this tutorial is finished.
